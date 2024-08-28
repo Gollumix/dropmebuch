@@ -1,0 +1,126 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family:  Helvetica;
+	margin: 0;
+	padding: 0;
+	background-color: #FFF;
+}
+
+header{
+	background-color: #181818;
+	color: #fff;
+}
+header > div.heading > h1{
+	margin: 0;
+	text-align: center;
+	text-transform: capitalize;
+	font-weight: 500;
+	padding: 15px 0;
+}
+div.container{
+	max-width: 400px;
+	margin: 40px  auto;
+	padding: 15px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+h3,label{
+	text-transform: capitalize;
+	color: #2a2a2a;
+}
+label{
+	display: block;
+	font-weight: 500;
+	margin-bottom: 8px;
+}
+fieldset{
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+input[type="text"],
+input[type="email"],
+input[type="submit"]{
+	width: 100%;
+	outline: none;
+	padding: 15px 12px;
+	margin-bottom: 20px;
+	border: 2px solid #2a2a2a;
+	transition: .5s;
+	border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus{
+	border-color: #2a2a2a;
+}
+ul.cards_list{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	
+}
+ul.cards_list li{
+	display: inline-block;
+}
+i[class^="fab"]{
+	font-size: 35px;
+	padding: 19px 15px;
+	color: #2a2a2a; 
+    
+}
+.checkBox > label{
+	font-weight: 500;
+	margin-bottom: 18px;
+}
+
+.btn:hover {
+	border-color: #2a2a2a;
+	background-color: #FFF;
+  cursor: pointer;
+	color: black;
+	font-weight: 500;
+	outline: none;
+	text-transform: capitalize;
+  
+}
+
+.btn{
+	border-color: #2a2a2a;
+	background-color: #2a2a2a;
+	color: #fff;
+	font-weight: 500;
+	outline: none;
+	text-transform: capitalize;
+}
+@media only screen and (min-width: 768px){
+	div.container{
+		max-width: 900px;
+		overflow: auto;
+	}
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-50 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  [class*="col-"] {
+  	float: left;
+  	padding:0 15px;
+
+ }
+  	.row::before,
+	.row::after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
