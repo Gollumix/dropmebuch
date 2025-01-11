@@ -16,6 +16,11 @@
   width: 70px;
 }
 
+.koszyk{
+  color: wheat;
+  gap: 10px;
+}
+
 .sizechart{
   text-decoration: none;
   color: wheat;
@@ -644,6 +649,7 @@ table{
   .menu
   .open-menu
   .close-menu
+  .koszyk
   }
   
 .opis12{

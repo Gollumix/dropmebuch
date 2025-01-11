@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/hamburg.css">
     <script type="text/javascript" src="js/loader.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/cart.js" defer></script>
 </head>
 <body>
 
@@ -23,15 +24,40 @@
                 <li><a href="index.html">DropMeBuch</a></li>
                 <li><a href="contact.html">contact</a></li>
                 <li><a href="artists.html">dropmebuch x artists</a></li>
-                <li><a href="#"><i style="font-size: 16px" class="fa">&#xf07a;</i></a></li>
+                <li><a href="cart.html"><i style="font-size: 16px" class="fa">&#xf07a;</i></a></li>
             </span>
             <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
         </ul>
     </nav>
     </header>
 
+    <center>
 
+    <body>
 
+        
+
+        <div class="koszyk">
+            <br>
+            <b> Your dropmebuch cart:</b>
+            <br>
+            <br>
+        <div id="cart-container"></div>
+        <br>
+        <p id="total">Total: 0 EUR</p>
+        <br>
+        <button id="clear-cart-btn" class="clear-cart-btn">Clear Cart</button>
+    </div>
+    <br><button onclick="window.location.href='index.html'">Go Back to Shop</button>
+    </div>
+    </center>
+        <script>
+          // Ładujemy koszyk po załadowaniu strony
+          window.onload = function() {
+            loadCart();
+          }
+        </script>
+      </body>
 
     <footer class="footer-distributed">
 

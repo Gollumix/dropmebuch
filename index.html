@@ -55,6 +55,11 @@
           document.getElementById('cookie-popup').className = '';
         }
       })();
+
+                // Zaktualizuj liczbę produktów w koszyku na stronie głównej
+                window.onload = function() {
+            updateCartCount();
+          };
     </script>
 
     <center>
@@ -208,6 +213,7 @@
         </div>
 
 
+      </body>
 
         </center>
       </center>
