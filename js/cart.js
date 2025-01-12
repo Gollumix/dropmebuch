@@ -1,5 +1,5 @@
 // Funkcja do dodawania produktu do koszyka
-function addToCart(productName, price) {
+function addToCart(productName, price,) {
   // Pobieramy koszyk z localStorage (jeśli istnieje) lub tworzymy nowy pusty koszyk
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -51,10 +51,12 @@ function loadCart() {
   cart.forEach(item => {
     total += item.price * item.quantity;
     cartContainer.innerHTML += `
+    <div class="koszyczek">
       <div class="cart-item">
         <p>${item.name}</p>
         <p>Price: ${item.price} EUR</p>
         <p>Quantity: ${item.quantity}</p>
+      </div>
       </div>
       <br>
       <br>
@@ -80,3 +82,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Funkcja do zaktualizowania liczby produktów w koszyku
+function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+  
+  // Zaktualizowanie liczby produktów w ikonie koszyka
+  const cartCountElement = document.getElementById("cart-count");
+  cartCountElement.textContent = cartCount;
+}
+
+// Wywołujemy funkcję, aby liczba była zaktualizowana na każdej stronie
+document.addEventListener("DOMContentLoaded", function () {
+  updateCartCount(); // Zaktualizowanie licznika koszyka przy ładowaniu strony
+});
