@@ -3,6 +3,55 @@
   font-family: "Courier New", Arial, sans-serif;
 }
 
+/* Stylowanie tabeli */
+.cart-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  border: 1px solid wheat;
+  overflow-x: auto; /* Umożliwia przewijanie tabeli na małych ekranach */
+}
+
+/* Stylowanie nagłówków tabeli */
+.cart-table th {
+  color: wheat;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Stylowanie komórek tabeli */
+.cart-table td {
+  padding: 10px;
+  border-top: 1px solid wheat;
+}
+
+/* Dostosowanie tabeli na ekranach o szerokości mniejszej niż 600px (telefony) */
+@media screen and (max-width: 400px) {
+  .cart-table th, .cart-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .cart-table {
+    width: 95%;
+  }
+}
+
+/* Dostosowanie tabeli na ekranach średniej wielkości (tablety) */
+@media screen and (max-width: 400px) {
+  .cart-table th, .cart-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .cart-table {
+    width: 90%;
+  }
+}
+
 
 .logowanie{
   padding: center;

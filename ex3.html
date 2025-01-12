@@ -80,20 +80,20 @@
                     <div class="product-size">
                         <h3>Select Size:</h3>
                         <div class="size-layout">
-                            <input type="radio" name="size" value="S" id="1" class="size-input">
-                            <label for="1" class="size">XS</label>
-
-                            <input type="radio" name="size" value="M" id="2" class="size-input">
-                            <label for="2" class="size">S</label>
-
-                            <input type="radio" name="size" value="L" id="3" class="size-input">
-                            <label for="3" class="size">M</label>
-
-                            <input type="radio" name="size" value="XL" id="4" class="size-input">
-                            <label for="4" class="size">L</label>
-
-                            <input type="radio" name="size" value="XXL" id="5" class="size-input">
-                            <label for="5" class="size">XL</label>
+                            <input type="radio" name="size" value="XS" id="size-xs" class="size-input">
+                            <label for="size-xs" class="size">XS</label>
+                    
+                            <input type="radio" name="size" value="S" id="size-s" class="size-input">
+                            <label for="size-s" class="size">S</label>
+                    
+                            <input type="radio" name="size" value="M" id="size-m" class="size-input">
+                            <label for="size-m" class="size">M</label>
+                    
+                            <input type="radio" name="size" value="L" id="size-l" class="size-input">
+                            <label for="size-l" class="size">L</label>
+                    
+                            <input type="radio" name="size" value="XL" id="size-xl" class="size-input">
+                            <label for="size-xl" class="size">XL</label>
                         </div>
                     </div>
                     <br>
@@ -104,10 +104,33 @@
 
                     <span class="divider"></span>
 
+
                     <div class="product-btn-group">
-                        <button onclick="addToCart('C Y P H E R x dropmebuch Tee', 50)">Buy Now</button>
-                        <button onclick="addToCart('C Y P H E R x dropmebuch Tee', 50)">Add to Cart</button>
-                    </div>
+                        <div class="button add-cart" onclick="addProductToCart()">Buy Now</div>
+                        <div class="button add-cart" onclick="addProductToCart()">Add to Cart</div>
+                      </div>
+                      
+                      <script>
+                        function addProductToCart() {
+                          // Pobierz nazwę produktu (np. z tytułu produktu)
+                          const productName = "C Y P H E R x dropmebuch"; // Nazwa produktu
+                          const price = 50; // Cena produktu (możesz zmieniać według produktu)
+                      
+                          // Pobierz wybrany rozmiar
+                          const selectedSize = document.querySelector('input[name="size"]:checked');
+                      
+                          if (selectedSize) {
+                            const size = selectedSize.value; // Wartość wybranego rozmiaru
+                      
+                            // Wywołaj funkcję addToCart z parametrami
+                            addToCart(productName, price, size);
+                          } else {
+                            // Zamiast alertu, wyświetl powiadomienie
+                            showNotification("Please select a size first!");
+                          }
+                        }
+                      </script>
+                    
                 </div>
             </div>
         </div>
