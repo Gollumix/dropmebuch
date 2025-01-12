@@ -20,7 +20,27 @@ function addToCart(productName, price,) {
 
   // Zapisujemy zaktualizowany koszyk do localStorage
   localStorage.setItem('cart', JSON.stringify(cart));
-  alert(`${productName} added to cart!`);
+  showNotification("Product added to cart!");
+// Funkcja wyświetlania powiadomienia
+function showNotification(message) {
+  const notification = document.createElement("div");
+  notification.textContent = message;
+  notification.style.position = "fixed";
+  notification.style.bottom = "20px";
+  notification.style.right = "20px";
+  notification.style.border = '1px dashed wheat';
+  notification.style.backgroundColor = 'black';
+  notification.style.color = "wheat";
+  notification.style.padding = "10px 15px";
+  notification.style.borderRadius = "5px";
+  notification.style.zIndex = "3000";
+  document.body.appendChild(notification);
+
+  setTimeout(() => {
+      notification.remove();
+  }, 5000);
+}
+
 
   // Zaktualizuj liczbę produktów w koszyku na stronie
   updateCartCount();
@@ -95,3 +115,8 @@ function updateCartCount() {
 document.addEventListener("DOMContentLoaded", function () {
   updateCartCount(); // Zaktualizowanie licznika koszyka przy ładowaniu strony
 });
+
+
+
+
+
