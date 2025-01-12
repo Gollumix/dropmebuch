@@ -60,7 +60,6 @@ function loadCart() {
       </div>
       <br>
       <br>
-      <br>
     `;
   });
 
