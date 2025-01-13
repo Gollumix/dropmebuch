@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Penta Tee - DROPME.CLOTHING</title>
+    <link rel="icon" href="zdj/siteicon.png">
+    <meta charset="utf-8">
+    <meta http-equiv="Imagetoolbar" content="no">
+    <meta name="description" content="Prosic Official Website">
+    <meta name="keywords" content="Hoodies Shoes T-shirts" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="css/hamburg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul class='nav-bar'>
+            <li class='logo'><a href='index.html'><img src='zdj/gif.gif'/></a></li>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+              <li><a href="index.html">DropMeBuch</a></li>
+              <li><a href="contact.html">contact</a></li>
+              <li><a href="artists.html">dropmebuch x artists</a></li>
+              <li><a href="cart.html"><i style="font-size: 16px" class="fa">&#xf07a;</i><span id="cart-count">0</span></a></li>
+          </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+    </nav>
+    </header>
+
+  <div class="container0">
+    <div class="single-product">
+        <div class="row">
+            <div class="col-6">
+                <div class="product-image">
+                    <div class="product-image-main">
+
+                            <div class="image-zoom-container">
+                                <img src="zdj/penta1.png" alt="black" id="product-main-image">
+                                <div class="zoom-lens"></div>
+                            </div>
+                        
+                        
+                    </div>
+                    <div class="product-image-slider">
+                        <img src="zdj/penta1.png" alt="black"  class="image-list">
+                        <img src="zdj/penta2.png" alt="black"  class="image-list">
+                        <img src="zdj/penta3.png" alt="black"  class="image-list">
+                        <img src="zdj/penta4.png" alt="black"  class="image-list">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+
+                <div class="breadcrumb">
+                    <span><a href="index.html">DROPMEBUCH</a></span>
+                    <span><a href="ex3.html">Penta Tee</a></span><br>
+                </div>
+
+                <div class="product">
+                    <div class="product-title">
+                        <h2 class="g2">Penta Tee</h2>
+                    </div>
+                     
+                    <div class="product-price">
+                        <span class="offer-price" data-original-price="50">40 EUR</span>
+                        <span class="sale-price"></span>
+                    </div>
+
+                    <div class="product-details">
+                        
+                        <p>Penta tee, 100% cotton, 210g/m<sup>2</sup>.<br>
+                          Screen printed print on the front, back and sides.<br> 
+                          All Made in Poland [🇵🇱]</p>
+                    </div>
+                    <br>
+                    <div class="product-size">
+                        <h3>Select Size:</h3>
+                        <div class="size-layout">
+                            <input type="radio" name="size" value="XS" id="size-xs" class="size-input">
+                            <label for="size-xs" class="size">XS</label>
+                    
+                            <input type="radio" name="size" value="S" id="size-s" class="size-input">
+                            <label for="size-s" class="size">S</label>
+                    
+                            <input type="radio" name="size" value="M" id="size-m" class="size-input">
+                            <label for="size-m" class="size">M</label>
+                    
+                            <input type="radio" name="size" value="L" id="size-l" class="size-input">
+                            <label for="size-l" class="size">L</label>
+                    
+                            <input type="radio" name="size" value="XL" id="size-xl" class="size-input">
+                            <label for="size-xl" class="size">XL</label>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="sizechart">
+                        <a href="zdj/sizechart.png" target="zdj/sizechart.png">Size Chart</a> 
+                    </div>
+
+                    <span class="divider"></span>
+
+
+                    <div class="product-btn-group">
+                        <div class="button add-cart" onclick="addProductToCart()">Buy Now</div>
+                        <div class="button add-cart" onclick="addProductToCart()">Add to Cart</div>
+                      </div>
+                      
+                      <script>
+                        function addProductToCart() {
+                          // Pobierz nazwę produktu (np. z tytułu produktu)
+                          const productName = "Penta Tee"; // Nazwa produktu
+                          const price = 40; // Cena produktu (możesz zmieniać według produktu)
+                      
+                          // Pobierz wybrany rozmiar
+                          const selectedSize = document.querySelector('input[name="size"]:checked');
+                      
+                          if (selectedSize) {
+                            const size = selectedSize.value; // Wartość wybranego rozmiaru
+                      
+                            // Wywołaj funkcję addToCart z parametrami
+                            addToCart(productName, price, size);
+                          } else {
+                            // Zamiast alertu, wyświetl powiadomienie
+                            showNotification("Please select a size first!");
+                          }
+                        }
+                      </script>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/imagezoom.js"></script>
+
+
+<br>
+
+<br>
+<script src="js/java.js"></script>
+<script src="js/cart.js"></script>
+  
+<footer class="footer-distributed">
+
+  <div class="footer-right">
+
+    ALL RAISE<br>FOR ONE BUCH
+
+  </div>
+
+  <div class="footer-left">
+
+    <p class="footer-links">
+      <a class="link-1" href="index.html">DropMeBuch</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/dropmebuch/">Instagram</a>
+    </p>
+
+    <p>DROPMEBUCH &copy; 2025</p>
+  </div>
+
+</footer>
+</body>
+</html>
+
