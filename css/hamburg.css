@@ -3,6 +3,16 @@
   font-family: "Courier New", Arial, sans-serif;
 }
 
+#currency-selector {
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px dashed wheat;
+  background-color: black;
+  cursor: pointer;
+  color: wheat;
+}
+
 /* Stylowanie tabeli */
 .cart-table {
   width: 100%;
@@ -14,6 +24,8 @@
   border: 1px solid wheat;
   overflow-x: auto; /* Umożliwia przewijanie tabeli na małych ekranach */
 }
+
+
 
 /* Stylowanie nagłówków tabeli */
 .cart-table th {
@@ -807,7 +819,7 @@ hr{
 .product-image-slider{
   display: flex;
   gap: 10px;
-  margin: 10px 0;
+  margin: 25px 0;
 }
 
 .product-image-slider img{
