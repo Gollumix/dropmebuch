@@ -18,9 +18,27 @@
 }
 
 #loading-logo {
-  width: 200px; /* Możesz dostosować rozmiar logo */
-  height: auto;
+  width: 15vw; /* Logo zajmuje 15% szerokości widoku */
+  max-width: 150px; /* Maksymalny rozmiar logo */
+  height: auto; /* Proporcjonalna wysokość */
 }
+
+@media (max-width: 768px) {
+  /* Dla tabletów i małych ekranów */
+  #loading-logo {
+    width: 20vw; /* Logo zajmuje 20% szerokości widoku */
+    max-width: 120px; /* Zmniejszony maksymalny rozmiar */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Dla bardzo małych ekranów (np. smartfonów) */
+  #loading-logo {
+    width: 30vw; /* Logo zajmuje 30% szerokości widoku */
+    max-width: 100px; /* Zmniejszony maksymalny rozmiar */
+  }
+}
+
 
 
 #currency-selector {
