@@ -14,21 +14,26 @@
 </head>
 <body>
 
-<header>
+  <header>
     <nav>
         <ul class='nav-bar'>
             <li class='logo'><a href='index.html'><img src='zdj/gif.gif'/></a></li>
             <input type='checkbox' id='check' />
             <span class="menu">
                 <li><a href="index.html">DropMeBuch</a></li>
-                <li><a href="contact.html">contact</a></li>
-                <li><a href="artists.html">dropmebuch x artists</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="artists.html">DropMeBuch x Artists</a></li>
                 <li><a href="cart.html"><i style="font-size: 16px" class="fa">&#xf07a;</i><span id="cart-count">0</span></a></li>
             </span>
             <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
         </ul>
     </nav>
-    </header>
+</header>
+
+<div id="loading-container">
+  <img src="zdj/dropmeclothing.gif" id="loading-logo" alt="Loading Logo" />
+</div>
+
     <br>
     <div id="cookie-popup">
       <p>
@@ -55,11 +60,6 @@
           document.getElementById('cookie-popup').className = '';
         }
       })();
-
-                // Zaktualizuj liczbę produktów w koszyku na stronie głównej
-                window.onload = function() {
-            updateCartCount();
-          };
     </script>
 
     <center>
@@ -87,7 +87,7 @@
                     </div>
           
                     <a class="cart" href="ex.html">
-                      <span class="price">30 EUR</span>
+                      <span class="price"data-original-price="30">30 EUR</span>
                       <span class="add-to-cart">
                         <span class="txt">BUY</span>
                       </span>
@@ -122,7 +122,7 @@
                     </div>
           
                     <a class="cart" href="ex2.html">
-                      <span class="price">30 EUR</span>
+                      <span class="price"data-original-price="30">30 EUR</span>
                       <span class="add-to-cart">
                         <span class="txt">BUY</span>
                       </span>
@@ -164,7 +164,7 @@
                     </div>
           
                     <a class="cart" href="ex1.html">
-                      <span class="price">50 EUR</span>
+                      <span class="price"data-original-price="50">50 EUR</span>
                       <span class="add-to-cart">
                         <span class="txt">BUY</span>
                       </span>
@@ -199,7 +199,7 @@
                     </div>
           
                     <a class="cart" href="ex3.html">
-                      <span class="price">50 EUR</span>
+                      <span class="price"data-original-price="50">50 EUR</span>
                       <span class="add-to-cart">
                         <span class="txt">BUY</span>
                       </span>
@@ -233,7 +233,7 @@
                     </div>
           
                     <a class="cart" href="ex4.html">
-                      <span class="price">50 EUR</span>
+                      <span class="price" data-original-price="50">50 EUR</span>
                       <span class="add-to-cart">
                         <span class="txt">BUY</span>
                       </span>
