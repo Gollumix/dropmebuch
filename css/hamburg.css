@@ -4,24 +4,6 @@
 }
 
 
-#loading-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black; /* Półprzezroczyste tło */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 5000;
-}
-
-#loading-logo {
-  width: 15vw; /* Logo zajmuje 15% szerokości widoku */
-  max-width: 150px; /* Maksymalny rozmiar logo */
-  height: auto; /* Proporcjonalna wysokość */
-}
 
 @media (max-width: 768px) {
   /* Dla tabletów i małych ekranów */
