@@ -60,30 +60,27 @@ function loadCart() {
   let total = 0;
 
   let tableHTML = `
-    <div class="cart-container">
-      <table class="cart-table">
+    <div class="cart-container" style="max-width: 600px; margin: 0 auto;">
+      <table class="cart-table" style="width: 100%; border-collapse: collapse; text-align: left;">
         <thead>
           <tr>
-            <th>Product Name</th>
-            <th>Size</th>
-            <th>Price (EUR)</th>
-            <th>Quantity</th>
-            <th>Total Price</th>
+            <th style="padding: 10px; border-bottom: 1px solid #ddd;">Product Name</th>
+            <th style="padding: 10px; border-bottom: 1px solid #ddd;">Size</th>
+            <th style="padding: 10px; border-bottom: 1px solid #ddd;">Price (EUR)</th>
+            <th style="padding: 10px; border-bottom: 1px solid #ddd;">Quantity</th>
           </tr>
         </thead>
         <tbody>
   `;
 
   cart.forEach(item => {
-    const itemTotal = item.price * item.quantity;
-    total += itemTotal;
+    total += item.price * item.quantity;
     tableHTML += `
       <tr>
-        <td>${item.name}</td>
-        <td>${item.size}</td>
-        <td>${item.price}</td>
-        <td>${item.quantity}</td>
-        <td>${itemTotal} EUR</td>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd;">${item.name}</td>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd;">${item.size}</td>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd;">${item.price}</td>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd;">${item.quantity}</td>
       </tr>
     `;
   });
@@ -93,7 +90,7 @@ function loadCart() {
       </table>
     </div>
     <br>
-    <p id="total">Your Total: ${total} EUR</p>
+    <p id="total" style="text-align: center; font-size: 18px;">Your Total: ${total} EUR</p>
   `;
 
   cartContainer.innerHTML = tableHTML;
