@@ -45,6 +45,9 @@
 
 */
 
+#total{
+  font-weight: bold;
+}
 
 #currency-selector {
   padding: 5px;
