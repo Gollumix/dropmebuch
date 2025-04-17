@@ -3,6 +3,8 @@
   font-family: "Courier New", Arial, sans-serif;
 }
 
+
+
 /*CSS DO ANIMACJI ŁADOWANIA
 
 #loading-container {
@@ -1631,6 +1633,8 @@ body {
 }
 .nav-bar {
     /*border: 1px dashed wheat;*/
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -1644,7 +1648,122 @@ body {
     color: wheat;
 }
 
+@media (max-width: 768px) {
+  .blurred-background {
+    display: none; /* Ukrywa kontener z obrazkiem */
+  }
+}
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+/* Stylizacja dla napisu przed stopką z tłem */
+
+.announcement1 {
+  font-family: 'Cinzel', serif; /* Użycie czcionki Cinzel (gothic) */
+  width: 100%;
+  height: 100vh; 
+  display: flex; /* Użycie Flexbox do centrowania */
+  justify-content: center; /* Centrowanie poziome */
+  align-items: center; /* Centrowanie pionowe */
+  text-align: center; /* Wyrównanie tekstu na środku */
+  padding: 0;
+  flex-direction: column;
+  background-image: url('https://raw.githubusercontent.com/Gollumix/dropmebuch/refs/heads/main/zdj/creamatorium.png');
+  background-size: cover; /* Obrazek rozciąga się na całą szerokość */
+  background-position: center center; /* Wyśrodkowanie obrazka */
+  color: wheat; /* Kolor tekstu na biały */
+  outline: none; /* Usunięcie obramowania (poświaty) przy focus */
+  box-shadow: none; /* Usunięcie ewentualnego cienia */
+}
+
+.announcement {
+  font-family: 'Cinzel', serif; /* Użycie czcionki Cinzel (gothic) */
+  width: 100%;
+  height: 600px; /* Wysokość sekcji ustawiona na 400px */
+  display: flex; /* Użycie Flexbox do centrowania */
+  justify-content: center; /* Centrowanie poziome */
+  align-items: center; /* Centrowanie pionowe */
+  text-align: center; /* Wyrównanie tekstu na środku */
+  padding: 0;
+  flex-direction: column;
+  background-image: url('https://raw.githubusercontent.com/Gollumix/dropmebuch/refs/heads/main/zdj/creamatorium.png');
+  background-size: cover; /* Obrazek rozciąga się na całą szerokość */
+  background-position: center center; /* Wyśrodkowanie obrazka */
+  color: wheat; /* Kolor tekstu na biały */
+  outline: none; /* Usunięcie obramowania (poświaty) przy focus */
+  box-shadow: none; /* Usunięcie ewentualnego cienia */
+}
+
+a:visited {
+  text-decoration: none; /* Usunięcie podkreślenia z odwiedzonych linków */
+  background: none; /* Usunięcie tła */
+  outline: none; /* Usunięcie poświaty */
+  box-shadow: none; /* Usunięcie cienia */
+}
+
+@media (max-width: 768px) {
+  .announcement {
+    height: 00px; /* Pozwól, aby sekcja miała automatyczną wysokość na małych ekranach */
+    padding: 0 10px; /* Mniejszy padding na mniejszych ekranach */
+  }
+
+  .crematorium {
+    font-size: 2rem; /* Mniejszy tekst na urządzeniach mobilnych */
+  }
+
+  .coming-soon {
+    font-size: 1.2rem; /* Jeszcze mniejszy tekst na urządzeniach mobilnych */
+  }
+}
+
+.crematorium {
+  font-size: 3rem; /* Duży tekst */
+  font-weight: bold;
+  text-transform: uppercase; /* Wszystkie litery wielkie */
+  margin: 0;
+  font-family: 'Cinzel', serif; /* Użycie czcionki Cinzel (gothic) */
+  background-color: transparent;
+}
+
+a{
+  text-decoration: none;
+  background: none;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+a:hover, a:focus, a:active, a:visited {
+  text-decoration: none;
+  background: none;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.coming-soon {
+  font-size: 1.5rem; /* Mniejszy tekst */
+  margin-top: 10px;
+  font-weight: lighter; /* Lżejsza czcionka */
+  text-transform: uppercase;
+  background-color: transparent;
+  font-family: 'Cinzel', serif; /* Użycie czcionki Cinzel (gothic) */
+  opacity: 0.7; /* Trochę przezroczystości, żeby wyglądało subtelniej */
+  text-decoration: none; /* Usunięcie podkreślenia */
+  background: transparent; /* Usunięcie tła */
+  color: inherit; /
+  outline: none; /* Usunięcie obramowania (poświaty) przy focus */
+  box-shadow: none; /* Usunięcie ewentualnego cienia */
+}
+
+/* Media Query: Dostosowanie dla mniejszych ekranów */
+@media (max-width: 768px) {
+  .crematorium {
+    font-size: 2rem; /* Mniejszy tekst na urządzeniach mobilnych */
+  }
+
+  .coming-soon {
+    font-size: 1rem; /* Jeszcze mniejszy tekst na mobilnych */
+  }
+}
 
 .logo{
   /*border: 1px dashed wheat;*/
