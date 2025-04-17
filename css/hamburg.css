@@ -469,6 +469,7 @@ a{
   outline: none;
   color: wheat;
   cursor: pointer;
+
 }
 
 button:hover{
@@ -1696,7 +1697,7 @@ body {
 
 a:visited {
   text-decoration: none; /* Usunięcie podkreślenia z odwiedzonych linków */
-  background: none; /* Usunięcie tła */
+  background: black; /* Usunięcie tła */
   outline: none; /* Usunięcie poświaty */
   box-shadow: none; /* Usunięcie cienia */
 }
@@ -1727,14 +1728,14 @@ a:visited {
 
 a{
   text-decoration: none;
-  background: none;
+  background: black;
   outline: none !important;
   box-shadow: none !important;
 }
 
 a:hover, a:focus, a:active, a:visited {
   text-decoration: none;
-  background: none;
+  background: black;
   outline: none !important;
   box-shadow: none !important;
 }
