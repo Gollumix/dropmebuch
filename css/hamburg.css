@@ -1329,6 +1329,7 @@ hr{
   padding: 45px 50px;
   animation-name: fade;
   animation-duration: 0.5s;
+  margin-top: 60px; /* Dodatkowa przestrzeń dla stopki */
 }
 
 .footer-distributed .footer-left p {
@@ -1768,6 +1769,8 @@ body {
     color: wheat;
 }
 
+
+
 @media (max-width: 768px) {
   .blurred-background {
     display: none; /* Ukrywa kontener z obrazkiem */
@@ -2005,3 +2008,4 @@ a:hover, a:focus, a:active, a:visited {
     .open-menu , .close-menu {display: block;}
     #check:checked ~ .menu {right: 0;}
 }
+
