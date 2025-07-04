@@ -790,7 +790,7 @@ form input[type= 'submit']:hover{
   bottom: 0;
   max-width: 300px;
   background: black;
-  border: 1px solid #e2e2e2;
+  border: 1px solid wheat;
   z-index: 9999;
   transition: all 0.3s ease-in-out;
   opacity: 0.94;
@@ -799,7 +799,7 @@ form input[type= 'submit']:hover{
 
 #cookie-popup p {
   margin: 0;
-  color: #fff;
+  color: wheat;
 }
 
 .cart-page{
@@ -849,11 +849,11 @@ table{
 #cookie-popup #cookie-popup-dismiss-btn {
   display: inline-block;
   margin-top: 16px;
-  color: white;
+  color: wheat;
   width: 70px;
   text-decoration: none ;
   background-color: black;
-  border: 1px solid white;
+  border: 1px solid wheat;
   padding: 8px 23px;
   cursor: pointer;
 }
@@ -1751,22 +1751,33 @@ body {
     --color1: #FFF ;
     --color2: #181818 ;
     display: center;
+    padding-top: 90px; /* dopasuj do faktycznej wysokości nav-bara */
 }
 .nav-bar {
-    /*border: 1px dashed wheat;*/
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    position: relative;
-    background-color: black;
-    padding: 12px 20px;
-    animation-name: fade;
-    animation-duration: 0.5s;
-    color: wheat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: wheat;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+
+
+.nav-bar.scrolled {
+  opacity: 0.7; /* Półprzezroczystość */
+}
+
+.nav-bar.scrolled:hover {
+  opacity: 1; /* Pełna widoczność po najechaniu */
 }
 
 
@@ -2009,3 +2020,22 @@ a:hover, a:focus, a:active, a:visited {
     #check:checked ~ .menu {right: 0;}
 }
 
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Opcjonalnie skaluj GIF jeśli trzeba */
+#loader img {
+  width: 240px; /* Zmień wedle potrzeb */
+  height: auto;
+}

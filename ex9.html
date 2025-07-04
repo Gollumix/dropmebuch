@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 
+    <div id="loader">
+    <img src="zdj/dropmeclothing.gif" alt="Ładowanie..." />
+  </div>
+
+
 <head>
-    <title>skele - black - DROPME.CLOTHING</title>
+    <title>Skele Tee - DROPME.CLOTHING</title>
     <link rel="icon" href="zdj/siteicon.png">
     <meta charset="utf-8">
     <meta http-equiv="Imagetoolbar" content="no">
@@ -14,6 +19,28 @@
 </head>
 
 <body>
+
+   <script>
+    // Ukryj loader po załadowaniu
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      const content = document.getElementById("content");
+      loader.style.display = "none";
+      content.style.display = "block";
+    });
+  </script>
+
+
+  <script>
+    window.addEventListener('scroll', function () {
+        const nav = document.querySelector('.nav-bar');
+        if (window.scrollY > 0) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+  </script>
 
 <header>
     <nav>

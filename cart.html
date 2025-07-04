@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+    <div id="loader">
+    <img src="zdj/dropmeclothing.gif" alt="Ładowanie..." />
+  </div>
+
+
 <head>
     <title>Cart - DROPME.CLOTHING</title>
     <link rel="icon" href="zdj/siteicon.png">
@@ -14,6 +20,16 @@
     <script src="js/cart.js" defer></script>
 </head>
 <body>
+
+   <script>
+    // Ukryj loader po załadowaniu
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      const content = document.getElementById("content");
+      loader.style.display = "none";
+      content.style.display = "block";
+    });
+  </script>
 
 <header>
     <nav>

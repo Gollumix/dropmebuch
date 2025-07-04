@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 
+    <div id="loader">
+    <img src="zdj/dropmeclothing.gif" alt="Ładowanie..." />
+  </div>
+
+
 <head>
     <title>C Y P H E R x dropmebuch - DROPME.CLOTHING</title>
     <link rel="icon" href="zdj/siteicon.png">
@@ -14,6 +19,27 @@
 </head>
 
 <body>
+
+   <script>
+    // Ukryj loader po załadowaniu
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      const content = document.getElementById("content");
+      loader.style.display = "none";
+      content.style.display = "block";
+    });
+  </script>
+
+  <script>
+    window.addEventListener('scroll', function () {
+        const nav = document.querySelector('.nav-bar');
+        if (window.scrollY > 0) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+  </script>
 
 <header>
     <nav>
